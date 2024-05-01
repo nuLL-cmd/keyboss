@@ -1,11 +1,12 @@
 #Database
 spring:
   sql:
-    init-moode: always
+    init:
+      mode: always #use data.sql to init inserts
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: web_service
-    url: jdbc:postgresql://192.168.100.27:3305/my_db
+    url: jdbc:mysql://192.168.100.27:3305/my_db
     password: pass_secret
     hikari:
       maximum-pool-size: 2
